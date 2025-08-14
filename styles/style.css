@@ -2,16 +2,13 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f8f9fa;
+  background: #f4f6fb;
   color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #4f7df3, #6c4ff3);
   color: white;
   padding: 2rem 1rem;
   text-align: center;
@@ -22,56 +19,56 @@ body {
 }
 .hero p {
   font-size: 1rem;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* Container */
 .container {
-  max-width: 600px;
+  max-width: 550px;
   margin: auto;
   padding: 2rem 1rem;
 }
 
-/* Upload Zone */
-.upload-zone {
-  border: 2px dashed #2575fc;
+/* Upload Box */
+.upload-box {
   background: white;
   padding: 2rem;
+  border: 2px dashed #4f7df3;
   border-radius: 15px;
   text-align: center;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
-.upload-zone:hover {
+.upload-box:hover {
   background: #f0f4ff;
   transform: scale(1.02);
 }
 .upload-icon {
   font-size: 3rem;
-  color: #2575fc;
+  color: #4f7df3;
   margin-bottom: 0.5rem;
 }
-.file-label {
+.choose-btn {
   display: inline-block;
-  background: #2575fc;
+  background: #4f7df3;
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 25px;
   cursor: pointer;
-  transition: background 0.3s;
+  margin-top: 0.5rem;
 }
-.file-label:hover {
-  background: #6a11cb;
+.choose-btn:hover {
+  background: #6c4ff3;
 }
-.file-label input {
+.choose-btn input {
   display: none;
 }
 
 /* Buttons */
-.buttons {
+.btn-group {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
-  justify-content: center;
 }
 button {
   padding: 0.7rem 1.5rem;
@@ -79,7 +76,7 @@ button {
   border-radius: 25px;
   font-size: 1rem;
   cursor: pointer;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #4f7df3, #6c4ff3);
   color: white;
   transition: 0.3s;
 }
@@ -95,16 +92,12 @@ button:hover:not(:disabled) {
 .note {
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: #666;
+  color: #555;
   text-align: center;
 }
 .note i {
-  color: #2575fc;
+  color: #4f7df3;
   margin-right: 5px;
-}
-.limit {
-  font-size: 0.85rem;
-  color: #a33;
 }
 
 /* Responsive */
@@ -112,7 +105,7 @@ button:hover:not(:disabled) {
   .hero h1 {
     font-size: 1.5rem;
   }
-  .upload-zone {
+  .upload-box {
     padding: 1.5rem;
   }
   button {

@@ -13,40 +13,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  
+
   <!-- Hero Section -->
   <header class="hero">
-    <div class="hero-content">
-      <h1><i class="fa-solid fa-image"></i> HEIC to JPG Converter</h1>
-      <p>Fast • Private • Free — Convert your HEIC images to JPG in seconds</p>
-    </div>
+    <h1><i class="fa-regular fa-image"></i> HEIC to JPG Converter</h1>
+    <p><strong>Fast • Private • Free</strong> — Convert your HEIC images to JPG in seconds</p>
   </header>
 
-  <!-- Upload Section -->
+  <!-- Upload Container -->
   <main class="container">
-    <div class="upload-zone" id="drop-zone">
+    <div class="upload-box" id="drop-zone">
       <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
       <p>Drag & drop up to <strong>5 HEIC/JPG</strong> images here</p>
       <span>or</span>
-      <label class="file-label">
+      <label class="choose-btn">
         <input type="file" id="file-input" multiple accept=".heic,.jpg,.jpeg" />
         Choose Files
       </label>
     </div>
 
     <!-- Buttons -->
-    <div class="buttons">
+    <div class="btn-group">
       <button id="convert-btn" disabled><i class="fa-solid fa-wand-magic-sparkles"></i> Convert</button>
       <button id="download-btn" disabled><i class="fa-solid fa-download"></i> Download All</button>
     </div>
 
     <!-- Notes -->
-    <div class="note">
-      <i class="fa-solid fa-lock"></i> No uploads — all conversions happen in your browser
-    </div>
-    <div class="note limit">
-      <i class="fa-solid fa-circle-info"></i> Maximum 5 images per conversion
-    </div>
+    <div class="note"><i class="fa-solid fa-lock"></i> No uploads — all conversions happen in your browser</div>
+    <div class="note"><i class="fa-solid fa-circle-info"></i> Maximum 5 images per conversion</div>
   </main>
 
   <script src="../scripts/app.js"></script>
