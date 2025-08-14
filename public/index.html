@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Convert HEIC to JPG Instantly</title>
+  <title>HEIC to JPG Converter</title>
   <link rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
@@ -16,20 +16,19 @@
   </header>
 
   <main>
-    <section class="upload-box">
-  <div class="plus-icon">+</div>
-  <p>Choose HEIC/JPG photos or drop them here</p>
-  <input
-    type="file"
-    id="fileInput"
-    multiple
-    accept=".heic,.jpg"
-  />
-  <p class="limit">Maximum 5 photos</p>
-  <button id="convertBtn">Convert</button>
-  <button id="downloadBtn" disabled>Download Photos</button>
-</section>
-    <p class="terms">By uploading your photos you confirm that you accept the <a href="#">terms of use</a>.</p>
+    <div class="upload-container" id="dropZone">
+      <div class="plus-icon">+</div>
+      <p>Choose HEIC/JPG photos or drop them here</p>
+      <p class="limit">Maximum 5 photos</p>
+      <input type="file" id="fileInput" multiple accept=".heic,.jpg">
+    </div>
+    <div class="buttons">
+      <button id="convertBtn">Convert</button>
+      <button id="downloadBtn" disabled>Download Photos</button>
+    </div>
+    <p class="terms">
+      By uploading your photos you confirm that you accept the <a href="#">terms of use</a>.
+    </p>
   </main>
 
   <script src="/scripts/main.js"></script>
