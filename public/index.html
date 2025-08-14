@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HEIC to JPG Converter</title>
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+  <h1>Convert HEIC to JPG Instantly</h1>
+  <form id="uploadForm">
+    <input type="file" id="fileInput" accept=".heic" multiple />
+    <button type="submit">Convert</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const files = document.getElementById('fileInput').files;
+      for (let file of files) {
+        const formData = new FormData();
+        formData.append('file', file);
+        const res = await fetch('/api/convert', {
+          method: 'POST',
+          body: formData
+        });
+        const blob = await res.blob();
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = file.name.replace('.heic', '.jpg');
+        link.textContent = `Download ${link.download}`;
+        document.getElementById('result').appendChild(link);
+      }
+    });
+  </script>
+</body>
+</html>
