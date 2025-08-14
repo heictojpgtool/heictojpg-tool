@@ -4,39 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HEIC to JPG Converter</title>
-  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>HEIC to JPG Converter</h1>
-    <nav>
-      <a href="#">Log in</a>
-      <a href="#">Sign up</a>
-    </nav>
+  
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1><i class="fa-solid fa-image"></i> HEIC to JPG Converter</h1>
+      <p>Fast • Private • Free — Convert your HEIC images to JPG in seconds</p>
+    </div>
   </header>
 
-  <main>
-  <section class="hero">
-    <h1>HEIC to JPG Converter</h1>
-    <p class="tagline">Fast. Private. Free. Convert in seconds.</p>
-
-    <div class="upload-zone" id="dropZone">
-      <div class="icon">+</div>
-      <p>Drop up to 5 HEIC/JPG images here</p>
-      <span>or click to select</span>
-      <input type="file" multiple accept=".heic,.jpg" id="fileInput">
+  <!-- Upload Section -->
+  <main class="container">
+    <div class="upload-zone" id="drop-zone">
+      <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+      <p>Drag & drop up to <strong>5 HEIC/JPG</strong> images here</p>
+      <span>or</span>
+      <label class="file-label">
+        <input type="file" id="file-input" multiple accept=".heic,.jpg,.jpeg" />
+        Choose Files
+      </label>
     </div>
 
-    <div class="preview" id="previewArea"></div>
-
-    <div class="actions">
-      <button id="convertBtn" disabled>Convert</button>
-      <button id="downloadBtn" class="hidden">Download All</button>
+    <!-- Buttons -->
+    <div class="buttons">
+      <button id="convert-btn" disabled><i class="fa-solid fa-wand-magic-sparkles"></i> Convert</button>
+      <button id="download-btn" disabled><i class="fa-solid fa-download"></i> Download All</button>
     </div>
 
-    <p class="trust"><i class="lock">🔒</i> No uploads — all conversions happen in your browser</p>
-  </section>
-</main>
-  <script src="/scripts/main.js"></script>
+    <!-- Notes -->
+    <div class="note">
+      <i class="fa-solid fa-lock"></i> No uploads — all conversions happen in your browser
+    </div>
+    <div class="note limit">
+      <i class="fa-solid fa-circle-info"></i> Maximum 5 images per conversion
+    </div>
+  </main>
+
+  <script src="../scripts/app.js"></script>
 </body>
 </html>

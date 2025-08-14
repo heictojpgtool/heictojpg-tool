@@ -1,135 +1,121 @@
+/* Global Styles */
 body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #eef3ff, #f8faff);
+  background: #f8f9fa;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* Hero Section */
 .hero {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 2rem 1rem;
   text-align: center;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: auto;
   padding: 2rem 1rem;
 }
 
-.tagline {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-
+/* Upload Zone */
 .upload-zone {
-  border: 3px dashed #7b61ff;
-  border-radius: 16px;
-  padding: 2rem;
-  max-width: 400px;
-  margin: auto;
+  border: 2px dashed #2575fc;
   background: white;
-  cursor: pointer;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
   transition: 0.3s;
 }
-.upload-zone:hover { border-color: #5a3be7; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-
-.icon {
+.upload-zone:hover {
+  background: #f0f4ff;
+  transform: scale(1.02);
+}
+.upload-icon {
   font-size: 3rem;
-  color: #7b61ff;
+  color: #2575fc;
   margin-bottom: 0.5rem;
 }
-
-.actions button {
-  padding: 0.7rem 1.5rem;
-  margin: 0.5rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
+.file-label {
+  display: inline-block;
+  background: #2575fc;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
   cursor: pointer;
+  transition: background 0.3s;
+}
+.file-label:hover {
+  background: #6a11cb;
+}
+.file-label input {
+  display: none;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
   transition: 0.3s;
 }
-
-#convertBtn {
-  background: linear-gradient(to right, #7b61ff, #4f8bff);
-  color: white;
-}
-#convertBtn:disabled { background: #ccc; cursor: not-allowed; }
-
-#downloadBtn {
-  background: #eee;
-}
-
-.trust {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 1rem;
-}
-
-header {
-  background: white;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header h1 { font-size: 1.5rem; color: #007aff; }
-nav a { margin-left: 1.5rem; text-decoration: none; color: #007aff; font-weight: bold; }
-
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.upload-container {
-  background: white;
-  border: 3px dashed #007aff;
-  border-radius: 12px;
-  width: 350px;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  transition: border-color 0.3s;
-}
-.upload-container:hover { border-color: #005bb5; }
-
-.plus-icon {
-  font-size: 4rem;
-  color: #007aff;
-}
-
-.limit { color: #777; font-size: 0.9rem; margin-top: 0.5rem; }
-
-.upload-container input[type="file"] {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.buttons {
-  margin-top: 1rem;
-}
-.buttons button {
-  padding: 0.6rem 1.5rem;
-  margin: 0 0.3rem;
-  border: none;
-  border-radius: 6px;
-  background: #007aff;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
-.buttons button:disabled {
+button:disabled {
   background: #ccc;
   cursor: not-allowed;
 }
-
-.terms {
-  font-size: 0.8rem;
-  color: #555;
-  margin-top: 1.5rem;
+button:hover:not(:disabled) {
+  opacity: 0.9;
 }
-.terms a { color: #007aff; text-decoration: none; }
+
+/* Notes */
+.note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+.note i {
+  color: #2575fc;
+  margin-right: 5px;
+}
+.limit {
+  font-size: 0.85rem;
+  color: #a33;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .upload-zone {
+    padding: 1.5rem;
+  }
+  button {
+    font-size: 0.9rem;
+  }
+}
