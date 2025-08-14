@@ -16,21 +16,27 @@
   </header>
 
   <main>
-    <div class="upload-container" id="dropZone">
-      <div class="plus-icon">+</div>
-      <p>Choose HEIC/JPG photos or drop them here</p>
-      <p class="limit">Maximum 5 photos</p>
-      <input type="file" id="fileInput" multiple accept=".heic,.jpg">
-    </div>
-    <div class="buttons">
-      <button id="convertBtn">Convert</button>
-      <button id="downloadBtn" disabled>Download Photos</button>
-    </div>
-    <p class="terms">
-      By uploading your photos you confirm that you accept the <a href="#">terms of use</a>.
-    </p>
-  </main>
+  <section class="hero">
+    <h1>HEIC to JPG Converter</h1>
+    <p class="tagline">Fast. Private. Free. Convert in seconds.</p>
 
+    <div class="upload-zone" id="dropZone">
+      <div class="icon">+</div>
+      <p>Drop up to 5 HEIC/JPG images here</p>
+      <span>or click to select</span>
+      <input type="file" multiple accept=".heic,.jpg" id="fileInput">
+    </div>
+
+    <div class="preview" id="previewArea"></div>
+
+    <div class="actions">
+      <button id="convertBtn" disabled>Convert</button>
+      <button id="downloadBtn" class="hidden">Download All</button>
+    </div>
+
+    <p class="trust"><i class="lock">🔒</i> No uploads — all conversions happen in your browser</p>
+  </section>
+</main>
   <script src="/scripts/main.js"></script>
 </body>
 </html>
